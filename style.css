@@ -62,6 +62,7 @@ a{
 }
 
 .content-ticket{
+    height: 320px;
     background-color: var(--white-color);
     width: 30%;
     /* height: 150px; */
@@ -117,7 +118,13 @@ hr{
     background: #FDF4E8;
     padding: 11px;
     border-radius: 5px;
-    overflow: auto;
+    margin-bottom: 15px;
+    overflow: scroll;
+}
+
+#result-container {
+    overflow: scroll;
+    height: 320px;
 }
 
 .btn-book{
@@ -127,6 +134,8 @@ hr{
     border-radius: 5px;
     padding: 8px 14px;
 }
+
+
 
 /* STYLE PAGE CART BOOKING */
 
