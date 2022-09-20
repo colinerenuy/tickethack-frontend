@@ -52,7 +52,7 @@ for (let i = 0 ; i<buttons.length ; i++) {
         
         window.location.assign('cart.html');
 
-        
+
         
     })
 }
