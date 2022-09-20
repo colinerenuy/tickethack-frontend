@@ -160,6 +160,14 @@ hr{
     margin: 20px 0px;
 }
 
+.btn-delete{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border:none;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+
 /* TOTAL TRIP */
 .total-trip{
     display: flex;
@@ -171,4 +179,21 @@ hr{
     color: var(--white-color);
     background-color: #003271;
     border-radius: 0px 0px 10px 10px;
+}
+
+.btn-purchase{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border:none;
+    border-radius: 5px;
+    padding: 7px 20px;
+}
+
+/* BOOKING STYLE */
+.info-trip hr {
+    border: 1px solid #000000;
+    width: 20%;
+}
+.msg-goodbye{
+    color: var(--blue-color);
 }
