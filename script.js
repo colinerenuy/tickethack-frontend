@@ -1,5 +1,3 @@
-
-
 document.querySelector('#search-form').onsubmit = function() {return false;}
 document.querySelector('#search-form').addEventListener('submit', function() {
     
