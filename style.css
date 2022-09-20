@@ -88,11 +88,10 @@ a{
 }
 
 input[type="date"]{
-    padding: 0px;
+    padding: 0px !important;
 }
 #btn-search{
     background-color: var(--blue-color);
-    background-color: none;
     border: none;
     width: 100%;
     border-radius: 5px;
@@ -109,7 +108,27 @@ hr{
     width: 80%;
 }
 
-/* STYLE PAGE CART */
+/* VOYAGE PROPOSER  */
+
+#trip-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FDF4E8;
+    padding: 11px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+#btn-book{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+}
+
+/* STYLE PAGE CART BOOKING */
 
 .container_cart_bookings{
     background-color: #EFF0F1;

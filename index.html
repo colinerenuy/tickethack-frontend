@@ -40,7 +40,7 @@
                     <form id="search-form"> 
                         <input type="search" id="search_departure" name="departure" placeholder="departure">
                         <input type="search" id="search_arrival" name="Arrival" placeholder="Arrival">
-                        <input type="date" id="search_date" min="2022-01-01" max="2013-12-31" value="">
+                        <input type="date" id="search_date" max="2023-12-31" min="2022-12-01"  value="2017-09-20">
                         <div>
                             <button type="submit" id="btn-search">Search</button>
                         </div>
@@ -52,11 +52,26 @@
             </div>
     
             <div class="content-ticket">
-                <div id="result-container">
+                 <div id="result-container">
                     <img src="./images/train.png" alt="">
                     <hr>
                     <p>It's time to book your future trip</p>
-                </div>
+                </div>        
+                
+                    <!-- <div id="trip-container">
+                        <div class="destination">
+                            <p> 
+                                <span class="departure-city">Paris</span>
+                                >
+                                <span class="arrival-city">Lyon</span> 
+                            </p>
+
+                        </div>
+                        
+                        <p class="trip-time">16:36</p>
+                        <p class="trip-price">126 €</p>
+                        <button type="submit" id="btn-book">Book</button>
+                    </div>                -->
             </div>
 
         </div>
