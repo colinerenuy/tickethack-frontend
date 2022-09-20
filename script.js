@@ -32,7 +32,7 @@ fetch(`http://localhost:3000/trips?${query.toString()}`)
         <div class = "trip-searched">${obj.departure} > ${obj.arrival}</div>
         <div class = "trip-time"></div>
         <div class = 'trip-price'>${obj.price}€</div>
-        <button type = "submit" class = 'book-btn' type = "button">Book</button>
+        <button type = "submit" class = 'btn-book' type = "button">Book</button>
     </div>
     `
  }});
