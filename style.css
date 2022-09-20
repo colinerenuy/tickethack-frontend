@@ -110,7 +110,7 @@ hr{
 
 /* VOYAGE PROPOSER  */
 
-#trip-container{
+.trip-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,7 +120,7 @@ hr{
     overflow: auto;
 }
 
-#btn-book{
+.btn-book{
     background-color: var(--blue-color);
     color: var(--white-color);
     border: none;
