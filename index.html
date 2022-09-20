@@ -13,21 +13,21 @@
 
     <div id="header">
         <div class="">
-            <a href="#">
-                <h2 id="logo">Tickethack</h2>
-            </a>
+            <h2 id="logo">
+                <a href="./index.html">Tickethack</a>
+            </h2>
         </div>
         <div id="menu">
              <ul>
-                <li>Cart</li>
-                <li>Bookings</li>
+                <li><a href="./cart.html">Cart</a></li>
+                <li><a href="./bookings.html">Bookings</a></li>
             </ul>
                 
         </div>
 
     </div>
 
-    <div id="container">
+    <div id="container-home">
 
         <div id="intro">
             <h1> Explore the world effortlessly by train !</h1>
@@ -38,10 +38,13 @@
             <div class="content-ticket" id="search-container">
                 <div >
                     <form id="search-form"> 
-                        <input type="search" id="search-departure" name="departure" placeholder="departure">
-                        <input type="search" id="search-Arrival" name="Arrival" placeholder="Arrival">
-                        <input type="date" id ="search_date" min="2022-01-01" max="2018-12-31" value="">
-                        <button type="submit" id="btn-search">Search</button>
+                        <input type="search" id="search_departure" name="departure" placeholder="departure">
+                        <input type="search" id="search_arrival" name="Arrival" placeholder="Arrival">
+                        <input type="date" id="search_date" min="2022-01-01" max="2013-12-31" value="">
+                        <div>
+                            <button type="submit" id="btn-search">Search</button>
+                        </div>
+                        
 
                     </form>                 
                 </div>
@@ -50,7 +53,6 @@
     
             <div class="content-ticket">
                 <div id="result-container">
-
                     <img src="./images/train.png" alt="">
                     <hr>
                     <p>It's time to book your future trip</p>
@@ -62,6 +64,7 @@
         
         
     </div>
-    <script src="script.js"></script>
+<script src="script.js"></script>
+  
 </body>
 </html>

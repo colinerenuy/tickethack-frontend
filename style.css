@@ -11,21 +11,38 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h2, h1{
+h2, h1,ul,p{
     margin: 0px;
 }
 #header{
     display: flex;
+    height: 60px;
+    justify-content:left;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 30px;
 }
+
 a{
     text-decoration: none;
+    color: #000;
 }
 
-#logo{
+#logo a{
     color: var(--blue-color);
 }
+#menu li{
+    list-style: none;
+    text-align: center;
+    padding: 0px 10px;
+    color: #000;
+}
 
-#container{
+#menu ul{
+    display: flex;
+}
+
+#container-home{
     width: 100%;
     height: 100vh;
     background-image: url(./images/background.jpg);
@@ -36,6 +53,7 @@ a{
 #intro{
     color: var(--white-color) ;
     text-align: center;
+    padding: 50px 0px;
 }
 
 #content_search{
@@ -50,9 +68,11 @@ a{
     margin: 10px 10px;
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
-    
+    text-align: center;  
 }
+
+/* FORMULAIRE */
+
 #search-form input{
     width: 100%;
     background-color: #EFF0F1;
@@ -62,7 +82,14 @@ a{
     border-radius: 5px;
     padding: 0px 10px;
 }
+#search_date{
+    margin-top: 30px !important;
+    margin-right: 10px !important;
+}
 
+input[type="date"]{
+    padding: 0px;
+}
 #btn-search{
     background-color: var(--blue-color);
     background-color: none;
@@ -73,7 +100,33 @@ a{
     color: var(--white-color);
 }
 
+#result-container img{
+    width: 53%;
+}
+
 hr{
     border: 1px solid var(--blue-color);
     width: 80%;
+}
+
+/* STYLE PAGE CART */
+
+.container_cart_bookings{
+    background-color: #EFF0F1;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.no_ticket{
+    background-color: var(--white-color);
+    text-align: center;
+    padding: 10px;
+    width: 70vw;
+}
+
+.no_ticket p{
+    margin: 20px 0px;
 }
