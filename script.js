@@ -51,6 +51,7 @@ for (let i = 0 ; i<buttons.length ; i++) {
         const tripTime = document.querySelectorAll('.trip-time')[i].textContent;
         
         window.location.assign('cart.html');
+
         
         
     })
