@@ -110,7 +110,7 @@ hr{
 
 /* VOYAGE PROPOSER  */
 
-#trip-container{
+.trip-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,7 +120,7 @@ hr{
     overflow: auto;
 }
 
-#btn-book{
+.btn-book{
     background-color: var(--blue-color);
     color: var(--white-color);
     border: none;
@@ -130,22 +130,36 @@ hr{
 
 /* STYLE PAGE CART BOOKING */
 
-.container_cart_bookings{
+.container-info-trip{
     background-color: #EFF0F1;
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
-.no_ticket{
+.info-trip{
     background-color: var(--white-color);
     text-align: center;
-    padding: 10px;
+    padding: 10px 40px;
     width: 70vw;
 }
 
-.no_ticket p{
+.info-trip p{
     margin: 20px 0px;
+}
+
+/* TOTAL TRIP */
+.total-trip{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 40px;
+    width: 70vw;
+    padding: 10px 40px;
+    color: var(--white-color);
+    background-color: #003271;
+    border-radius: 0px 0px 10px 10px;
 }
