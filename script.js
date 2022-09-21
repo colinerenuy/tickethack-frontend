@@ -1,6 +1,14 @@
 //=========================GLOBAL VARIABLES=========================
 
 let searchedDate = '';
+
+
+function getHour(date) {
+    const tripDate = new Date(date)
+    const hoursMinutes = ((tripDate.getHours()<10?'0':'') + tripDate.getHours()) + ':' + ((tripDate.getMinutes()<10?'0':'') + tripDate.getMinutes()) ;
+    return hoursMinutes
+}
+
 //========================SEARCH FORM===============================
 
 document.querySelector('#search-form').onsubmit = function() {return false;}
@@ -24,6 +32,7 @@ document.querySelector('#search-form').addEventListener('submit', function() {
      .then(data => {
         console.log(data);
         console.log(data.trips);
+        
         for (obj of data.trips) {
             document.querySelector('#result-container').innerHTML += `
         <div class = "trip-container">
@@ -35,13 +44,12 @@ document.querySelector('#search-form').addEventListener('submit', function() {
                 </p>
 
             </div>
-            <div class = "trip-time"></div>
+            <div class = "trip-time">${getHour(obj.date)}</div>
             <div class = 'trip-price'>${obj.price}€</div>
             <button type = "submit" class = 'btn-book' type = "button">Book</button>
         </div>
         `
-
-        addToCart()
+            addToCart();
      }});
 
 })
@@ -59,40 +67,32 @@ function addToCart() {
     for (let i = 0 ; i < buttons.length ; i++) {
 
         buttons[i].addEventListener('click', function() {
-
+        console.log('click');
+        window.location.href = "./cart.html"
         const departure = document.querySelectorAll('.departure-city')[i].textContent;
         const arrival = document.querySelectorAll('.arrival-city')[i].textContent;
         const date = searchedDate;
         const priceEuro = document.querySelectorAll('.trip-price')[i].textContent;
         const price = Number(priceEuro.replace(/[^0-9.-]+/g,""));
+        const time = document.querySelectorAll('.trip-time')[i].textContent;
         let query = new URLSearchParams();
         query.append('arrival', arrival); 
         query.append('departure', departure);
         query.append('date', date);
         
-        
-    fetch(`http://localhost:3000/trips?${query.toString()}`)
-    .then(response => response.json())
-     .then(data => {
-        console.log(data)
-        
-        const tripToCart = data[0].filter(trip => trip.price == price)
-        console.log(tripToCart)
-       /* fetch(`http://localhost:3000/cart`, {
+
+       fetch(`http://localhost:3000/cart`, {
             method: 'POST', 
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ departure, arrival, date, price }),
+            body: JSON.stringify({departure, arrival, date, price, time}),
     })
         .then(response => response.json())
-        .then(data => { 
+        .then(data => {
             console.log('Added to cart')
- })*/
+ })
      })
-
-        
-
-        })
+        }
 
     }
 
-}
+
