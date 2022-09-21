@@ -6,6 +6,12 @@ const tripInfos = {
     price : document.querySelector('.trip-price').value,
 }
 
+function getHour(date) {
+    const tripDate = new Date(date)
+    const hoursMinutes = ((tripDate.getHours()<10?'0':'') + tripDate.getHours()) + ':' + ((tripDate.getMinutes()<10?'0':'') + tripDate.getMinutes()) ;
+    return hoursMinutes
+}
+
 
 fetch('http://localhost:3000/cart')
 .then(response => response.json())
@@ -13,30 +19,25 @@ fetch('http://localhost:3000/cart')
     console.log(data);
     console.log(data.cart);
     if (data.cart){
-
+        let donnees = data.cart
    
-    for (obj of data.cart) {
+    for (let i = 0 ; i< donnees.length  ; i++) {
         document.querySelector('.containe-all-trip').innerHTML += ` 
 
-        <div class="bookings-with-trip">
-        <div class="info-trip">
-            <h3> My bookings</h3>
-            <div class="trip-container">
-                <div class="destination">
-                    <p> 
-                        <span class="departure">${obj.departure}</span>
-                        >
-                        <span class="arrival">${obj.arrival}</span> 
-                    </p>
-                </div>
-                <p class="trip-time">${obj.date}/p>
-                <p class="trip-price">${obj.price} €</p>
-                <p class="time-departure"> Departure in 5 hours</p>
-            </div>  
-            <hr>
-            <p class="msg-goodbye">Enjoy your travels with Tickethack !</p>  
-        </div> 
-    </div>        
+        <div class="trip-container">
+                    <div class="destination">
+                        <p> 
+                            <span class="departure">${donnees[i].tripInCart.departure}</span>
+                            >
+                            <span class="arrival">${donnees[i].tripInCart.arrival}</span> 
+                        </p>
+
+                    </div>
+                    
+                    <p class="trip-time">${getHour(donnees[i].tripInCart.date)}</p>
+                    <p class="trip-price">${donnees[i].tripInCart.price}  €</p>
+                    <button class="btn-delete">✖</button>
+                </div>   
     `
     deletetrip();
  } 
