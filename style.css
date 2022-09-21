@@ -167,7 +167,12 @@ hr{
     border-radius: 5px;
 }
 
-/* TOTAL TRIP */
+/* CART CSS */
+.containe-all-trip{
+    max-height: 265px;
+    overflow: auto;
+    margin-bottom: 15px;
+}
 .total-trip{
     display: flex;
     align-items: center;
